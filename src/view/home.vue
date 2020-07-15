@@ -1,10 +1,17 @@
 <template>
 <div class="home">
-<h1>hom</h1>
+    <swiper/>
+    <goodBar/>
 </div>
 </template>
 <script>
+import swiper from '@/components/swiper/swiper'
+import goodBar from '@/components/bar/goodBar'
 export default {
+    components: {
+        swiper,
+        goodBar
+    }
 
 }
 </script>

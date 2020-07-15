@@ -1,23 +1,27 @@
 <template>
 <div class="nav">
 <ul class="nav-list">
-    <li class="list-bar" v-for="(item,i) in barData" :key="i">
+    <li v-for="(item,i) in barData" :key="i" >
+    <router-link :to="item.path" class="list-bar">
         <i class="iconfont" :class="item.icon"></i>
-        <span>{{item.text}}</span>
+        <span class="text">{{item.text}}</span>
+    </router-link>
     </li>
 </ul>
 </div>
 </template>
 <script>
 export default {
-    props: ['barData'],
-    data () {
-    }
+    props: ['barData']
 }
 </script>
 <style scoped lang='scss'>
 $iconSize: 0.37rem;
 $spanSize: 0.16rem;
+$colorD2: #666;
+a{
+    text-decoration: none;
+}
 .nav{
     .nav-list{
         display: flex;
@@ -28,8 +32,14 @@ $spanSize: 0.16rem;
             flex-direction: column;
             align-items: center;
             font-size: $spanSize;
-            i{
-                font-size: $iconSize; 
+            color: $colorD2;
+            .iconfont{
+                font-size: $iconSize;
+                color: $colorD2;
+            }
+            .text {
+                @extend .iconfont;
+                font-size: $spanSize;
             }
         }
     }

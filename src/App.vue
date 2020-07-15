@@ -23,7 +23,7 @@ export default {
                 {
                     icon: 'icon-sousuo',
                     text: '分类',
-                    path: '/category'
+                    path: '/classify'
                 },
                 {
                     icon: 'icon-gouwuche',
@@ -62,6 +62,10 @@ html,body{
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding-bottom: 0.16rem;
+    margin: 0;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 0.06rem;
+    padding-bottom: 0.12rem;
+    background-color: #fff;
 }
 </style>
