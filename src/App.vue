@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <router-view/>
+    <div class="content">
+        <router-view/>
+    </div>
     <div class="footer">
         <Nav :barData="barData" />
     </div>
@@ -48,6 +50,7 @@ export default {
 *{
     margin:0;
     padding:0;
+    font-family: "Microsoft YaHei"
 }
 li{
     list-style: none;
@@ -58,14 +61,18 @@ html,body{
 #app {
     height: 100%;
 }
+.content{
+    height:93%;
+}
 .footer{
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 7%;
     margin: 0;
     border-top: 1px solid #e2e2e2;
-    padding-top: 0.06rem;
-    padding-bottom: 0.12rem;
+    /* padding-top: 0.06rem;
+    padding-bottom: 0.12rem; */
     background-color: #fff;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
 <div class="home">
     <swiper/>
-    <goodBar/>
+    <good-bar/>
 </div>
 </template>
 <script>

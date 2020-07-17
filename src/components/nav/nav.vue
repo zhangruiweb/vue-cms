@@ -1,7 +1,7 @@
 <template>
 <div class="nav">
 <ul class="nav-list">
-    <li v-for="(item,i) in barData" :key="i" >
+    <li v-for="(item,i) in barData" :key="i">
     <router-link :to="item.path" class="list-bar">
         <i class="iconfont" :class="item.icon"></i>
         <span class="text">{{item.text}}</span>
@@ -23,6 +23,7 @@ a{
     text-decoration: none;
 }
 .nav{
+    margin-top:0.09rem;
     .nav-list{
         display: flex;
         flex-direction: row;
@@ -35,12 +36,13 @@ a{
             color: $colorD2;
             .iconfont{
                 font-size: $iconSize;
-                color: $colorD2;
             }
             .text {
-                @extend .iconfont;
                 font-size: $spanSize;
             }
+        }
+        .router-link-exact-active{
+            color:blueviolet;
         }
     }
 
